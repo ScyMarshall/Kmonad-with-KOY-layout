@@ -75,7 +75,7 @@ These are the default layers for my keyboard
   _    _    _              _                   _    _    _    _          _    _    _     _    _
 )
 
-(deflayer quertz
+(deflayer qwertz
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
   grv  1    2    3    4    5    6    7    8    9    0    @ß   =    bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  q    w    e    r    t    y    u    i    o    p    @ue  +    ret   del  end  pgdn  kp7  kp8  kp9  kp+
@@ -89,116 +89,109 @@ These are the default layers for my keyboard
 #|------------------------------------------------------------------------|#
 
 (defalias
-    ;; Layer Jumping aliases
-    ;; Switch to QWERTZ layout (and back)
-    lvq (layer-switch qwertz) ;; Set qwertz as the base layer
-    lv1 (layer-switch level1) ;; Set koy level1 as the base layer
-    ;; Bind lvX to a button that switches to a layer
-    lv2 (layer-toggle level2)
-    lv3 (layer-toggle level3)
-    lv4 (layer-toggle level4)
+  ;; Layer Jumping aliases
+  ;; Switch to QWERTZ layout (and back)
+  lvq (layer-switch qwertz) ;; Set qwertz as the base layer
+  lv1 (layer-switch level1) ;; Set koy level1 as the base layer
+  ;; Bind lvX to a button that switches to a layer
+  lv2 (layer-toggle level2)
+  lv3 (layer-toggle level3)
+  lv4 (layer-toggle level4)
 )
+
+#|-----------------test
 
 (defalias
-    ;; Wincompose Codes aliases
-    l  #(ralt l l) ;;script small l (ℓ)
-    ef #(ralt f ,) ;;latin small f (ƒ)
-    ss #(ralt s s) ;;sharp s
-    ae #(ralt " a) ;;little ä
-    oe #(ralt " o) ;;little ö
-    ue #(ralt " u) ;;little ü
-    AE #(ralt " A) ;;big Ä
-    OE #(ralt " O) ;;big Ö
-    UE #(ralt " U) ;;big Ü
+  ;; Wincompose Codes aliases
+  l  #(ralt l l) ;;script small l (ℓ)
+  ef #(ralt f ,) ;;latin small f (ƒ)
+  ss #(ralt s s) ;;sharp s
+  ae #(ralt " a) ;;little ä
+  oe #(ralt " o) ;;little ö
+  ue #(ralt " u) ;;little ü
+  AE #(ralt " A) ;;big Ä
+  OE #(ralt " O) ;;big Ö
+  UE #(ralt " U) ;;big Ü
+
+  »  #(ralt > >)  ;;quot right
+  «  #(ralt < <)  ;;quot left
+  „  #(ralt , ,)  ;;quot down
+  “  #(ralt ` `)  ;;quot up
+  ”  #(ralt ' ')  ;;quot up turnaround 9
+  •  #(ralt c 1 .)  ;; middle dot
+  ›  #(ralt . >)  ;;quotation mark
+  ‹  #(ralt . <)  ;;quotation mark
+  ¢  #(ralt / c)  ;;Cent
+  ¥  #(ralt y -)  ;;Yen
+  ‚  #(ralt , spc) ;; single down quotation mark
+  ‘  #(ralt ´ <)  ;;single up qotation mark
+  ’  #(ralt ' 9)  ;;single up quotation mark turnaround 9
+
+  tho #(ralt - - -) ;;em dash
+  thu #(ralt - - .)  ;;en dash
+  che #(ralt y y)  ;; heavy checkmark (✔)
+  exx #(ralt @ @ x)  ;; heavy ballot (✘)
+  sta #(ralt * *)  ;; star (⭐)
+  spa #(ralt 3 -)    ;;spade
+  cro #(ralt ralt / x) ;;Cross
+  not #(ralt - ,) ;;math NOT
+  or  #(ralt \ /)  ;;math OR
+  and #(ralt / \) ;;math AND
+  ccp #(ralt left o)  ;;counterclockwise circle
+  cp  #(ralt rght o)  ;;clockwise circle
+  di  #(ralt d i)  ;;diameter (⌀)
+  bsl #(ralt < /)  ;;backslash \ \ \
+  po  #(ralt + + )  ;;pound sign (#)
+  lv  #(ralt l v)  ;;vertical line(|)
+  bt  #(ralt ` spc) ;; Back Accent
+  cur #(ralt o x) ;;currency symbol (¤)
+  pou #(ralt l -)  ;;brittish pound
+
+  ;; Letter aliases
+  y z
+  Y Z
+  z y
+  Z Y
+
+  ;; Numeric aliases
+  1 RA-1 ^
+  2 RA-2 ^
+  3 RA-3 ^
+
+  ;; Icon aliases
+  ~ RA-n
+  € RA-e
+  $ S-4
+  § S-3
+  ° S-^
+  … RA-.
+  do S--
+  eau RA-8
+  ezu RA-9
+  sau RA-7
+  szu RA-0
+  kau S-8
+  kzu S-9
+  ! S-1
+  ? S-ß
+  < `
+  > S-`
+  = S-0
+  & S-6
+  sl S-7
+  * S-+
+  : S-.
+  ; S-,
+  at RA-q
+  $ S-4
+  % S-5
+  hdt S-2
 )
 
-(defalias
-    »  #(ralt > >)  ;;quot right
-    «  #(ralt < <)  ;;quot left
-    „  #(ralt , ,)  ;;quot down
-    “  #(ralt ` `)  ;;quot up
-    ”  #(ralt ' ')  ;;quot up turnaround 9
-    •  #(ralt c 1 .)  ;; middle dot
-    ›  #(ralt . >)  ;;quotation mark
-    ‹  #(ralt . <)  ;;quotation mark
-    ¢  #(ralt / c)  ;;Cent
-    ¥  #(ralt y -)  ;;Yen
-    ‚  #(ralt , spc) ;; single down quotation mark
-    ‘  #(ralt ´ <)  ;;single up qotation mark
-    ’  #(ralt ' 9)  ;;single up quotation mark turnaround 9
-)
-
-(defalias
-    tho #(ralt - - -) ;;em dash
-    thu #(ralt - - .)  ;;en dash
-    che #(ralt y y)  ;; heavy checkmark (✔)
-    exx #(ralt @ @ x)  ;; heavy ballot (✘)
-    sta #(ralt * *)  ;; star (⭐)
-    spa #(ralt 3 -)    ;;spade
-    cro #(ralt ralt / x) ;;Cross
-    not #(ralt - ,) ;;math NOT
-    or  #(ralt \ /)  ;;math OR
-    and #(ralt / \) ;;math AND
-    ;;ccp #(ralt left o)  ;;counterclockwise circle
-    ;;cp  #(ralt rght o)  ;;clockwise circle
-    di  #(ralt d i)  ;;diameter (⌀)
-    bsl #(ralt < /)  ;;backslash \ \ \
-    po  #(ralt + + )  ;;pound sign (#)
-    lv  #(ralt l v)  ;;vertical line(|)
-    bt  #(ralt ` spc) ;; Back Accent
-    cur #(ralt o x) ;;currency symbol (¤)
-    pou #(ralt l -)  ;;brittish pound
-)
-
-(defalias
-    ;; Letter aliases
-    y z
-    Y Z
-    z y
-    Z Y
-)
-
-(defalias
-    ;; Numeric aliases
-    1 RA-1 ^
-    2 RA-2 ^
-    3 RA-3 ^
-)
-
-(defalias
-    ;; Icon aliases
-    ~ RA-n
-    € RA-e
-    $ S-4
-    § S-3
-    ° S-^
-    … RA-.
-    do S--
-    eau RA-8
-    ezu RA-9
-    sau RA-7
-    szu RA-0
-    kau S-8
-    kzu S-9
-    ! S-1
-    ? S-ß
-    < `
-    > S-`
-    = S-0
-    & S-6
-    sl S-7
-    * S-+
-    : S-.
-    ; S-,
-    at RA-q
-    $ S-4
-    % S-5
-    hdt S-2
-    ;;hst S-#
-
-)
+------------------|#
 
 #|-------
+    ;;hst S-#
   ̌   #(ralt < spc) ;;caron
   °  #(ralt # *)  ;;degree
   … RA-.
