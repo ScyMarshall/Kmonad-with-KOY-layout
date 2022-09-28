@@ -62,7 +62,7 @@ These are the default layers for my keyboard
   S-6  1    2    3    4    5    6    7    8    9    0    min  grv  bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  k    .    o    comm y    v    g    c    l    @ss  z    apo  ret   del  end  pgdn  kp7  kp8  kp9  kp+
   @lv3 h    a    e    i    u    d    t    r    n    s    f    @lv3                       kp4  kp5  kp6
-  lsft @lv4 x    q    @au  @ue  @oe  b    p    w    m    j    @lv2            up         kp1  kp2  kp3  kprt
+  lsft @lv4 x    q    @ae  @ue  @oe  b    p    w    m    j    @lv2            up         kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 @lv4 rmet @lvq rctl       left down rght  kp0  kp.
 )
 
@@ -122,8 +122,8 @@ These are the default layers for my keyboard
     1    #(ralt ^ 1) ;;super 1
     2    #(ralt ^ 2) ;;super 2
     3    #(ralt ^ 3) ;;super 3
-    ae   #(a+") ;;little ae
-    AE   #(A+") ;;big AE
+    ae   #(a +") ;;little ae
+    AE   #(A +") ;;big AE
     and  #(ralt / bksl) ;;math AND##TEST DOUBLED BACKSLASH
     at   #(ralt q)  ;;RA-q
     bob  #(ralt c 1 .)  ;; middle dot
@@ -148,8 +148,8 @@ These are the default layers for my keyboard
     mql  #(ralt < <)  ;;quot left
     mqr  #(ralt > >)  ;;quot right
     not  #(ralt min comm) ;;math NOT
-    oe   #(o+") ;;little oe
-    OE   #(O+") ;;big OE
+    oe   #(o +") ;;little oe
+    OE   #(O +") ;;big OE
     or   #(ralt bksl /)  ;;math OR ##TEST DOUBLED BACKSLASH
     par  #(ralt o s) ;;paragraph
     qdt  #(ralt comm comm)  ;;quot down
@@ -169,8 +169,8 @@ These are the default layers for my keyboard
     szu  #(ralt 0)  ;;RA-0
     tho  #(ralt min min min) ;;em dash
     thu  #(ralt min min .)  ;;en dash
-    ue   #(u+") ;;little ue
-    UE   #(U+") ;;big UE
+    ue   #(u +") ;;little ue
+    UE   #(U +") ;;big UE
     uz   #(ralt rght o)  ;;clockwise circle
     yen  #(ralt y min)  ;;Yen min replace the line minus
 )
