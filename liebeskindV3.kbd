@@ -2,7 +2,8 @@
   ;; For Windows
   input  (low-level-hook)
   output (send-event-sink)
-
+  cmp-seq ralt
+    cmp-seq-delay 5
   ;; Comment this is you want unhandled events not to be emitted
   fallthrough true
 
@@ -62,7 +63,7 @@ These are the default layers for my keyboard
   S-6  1    2    3    4    5    6    7    8    9    0    min  grv  bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  k    .    o    comm y    v    g    c    l    @ss  z    apo  ret   del  end  pgdn  kp7  kp8  kp9  kp+
   @lv3 h    a    e    i    u    d    t    r    n    s    f    @lv3                       kp4  kp5  kp6
-  lsft @lv4 x    q    @ae  @ue  @oe  b    p    w    m    j    @lv2            up         kp1  kp2  kp3  kprt
+  @lv2 @lv4 x    q    @ae  @ue  @oe  b    p    w    m    j    @lv2            up         kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 @lv4 rmet @lvq rctl       left down rght  kp0  kp.
 )
 
@@ -71,7 +72,7 @@ These are the default layers for my keyboard
   S-6  @eye @par @l   @mqr @mql S-4  @eur @qdt @qut @qit @tho grv  bspc  ins  home pgup  S-tab kp/ kp*  kp-
   tab  K    @bob O    @thu Y    V    G    C    L    @ss  Z    S-`  ret   del  end  pgdn  @hch @exx @sta kp+
   @lv3 H    A    E    I    U    D    T    R    N    S    F    @lv3                       @spa @eur @kro
-  lsft @lv4 X    Q    @AE  @UE  @OE  B    P    W    M    J    rsft            up         @not @or  @and kprt
+  @lv2 @lv4 X    Q    @AE  @UE  @OE  B    P    W    M    J    @lv2            up         @not @or  @and kprt
   lctl lmet lalt           spc                 @lv4 rmet @lv1 rctl       left down rght  kp0  kp.
 )
 
@@ -79,8 +80,8 @@ These are the default layers for my keyboard
   _    _    _    _    _    _    _    _    _    _    _    _    _          ssrq slck pause
   @uz  @1   @2   @3   @qmr @qml @sen @yen @sdq apo  @sqt @guz @eye bspc  ins  home pgup  S-tab kp/ kp*  kp-
   tab  @ddd @do  lbrc rbrc S-6  S-1  S-comm S-. eql S-7  @ef  @di  ret   del  end  pgdn  @hch @exx @sta kp+
-  @lv3 bksl /    @sau @szu @sta S-/  @kau @kzu min  @col @at  @lv3                       @spa @eur @kro
-  lsft @lv4 @po  S-4  @lv  S-`  @bt  S-eql S-5 '    @sqt scln rsft            up         @not @or  @and kprt
+  @lv3 bksl /    S-[  S-]  S-8  S-/  S-9  S-0  min  @col @at  @lv3                       @spa @eur @kro
+  @lv2 @lv4 @po  S-4  @lv  S-`  @bt  S-eql S-5 '    @sqt scln @lv2            up         @not @or  @and kprt
   lctl lmet lalt           spc                 @lv4 rmet cmp  rctl       left down rght  kp0  kp.
 )
 
@@ -89,14 +90,14 @@ These are the default layers for my keyboard
   _    _    _    _    _    _    _    @pou @cur /    S-8  _    _    bspc  _    _    _     _    _    _    _
   _    _    bspc up   del  _    _    _    kp7  kp8  kp9  @thu _    ret   _    _    _     _    _    _    _
   @lv3 pgup left down rght pgdn _    _    kp4  kp5  kp6  _    _                          _    _    _
-  lsft @lv1 _    _    _    _    _    _    kp1  kp2  kp3  scln rsft            _          _    _    _    _
+  @lv2 @lv1 _    _    _    _    _    _    kp1  kp2  kp3  scln @lv2            _          _    _    _    _
   _    _    _              _                   _    _    _    _          _    _    _     _    _
 )
 
 (deflayer qwertz
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
   S-6  1    2    3    4    5    6    7    8    9    0    @ss  eql  bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    y    u    i    o    p    @ue  S-eql ret  del  end  pgdn  kp7  kp8  kp9  kp+
+  tab  q    w    e    r    t    z    u    i    o    p    @ue  S-eql ret  del  end  pgdn  kp7  kp8  kp9  kp+
   caps a    s    d    f    g    h    j    k    l    @oe  @ae  @po                        kp4  kp5  kp6
   lsft 102d y    x    c    v    b    n    m    comm .    min  rsft            up         kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 ralt rmet @lv1 rctl       left down rght  kp0  kp.
@@ -122,8 +123,8 @@ These are the default layers for my keyboard
     1    #(ralt ^ 1) ;;super 1
     2    #(ralt ^ 2) ;;super 2
     3    #(ralt ^ 3) ;;super 3
-    ae   #(a +") ;;little ae
-    AE   #(A +") ;;big AE
+    ae   #(ralt " a) ;;little ae
+    AE   #(+" A) ;;big AE
     and  #(ralt / bksl) ;;math AND##TEST DOUBLED BACKSLASH
     at   #(ralt q)  ;;RA-q
     bob  #(ralt c 1 .)  ;; middle dot
@@ -139,17 +140,15 @@ These are the default layers for my keyboard
     exx  #(ralt @ @ x)  ;; heavy ballot
     guz  #(ralt left o)  ;;counterclockwise circle
     hch  #(ralt y y)  ;; heavy checkmark
-    hdt  #(lsft 2)  ;; instead S-2
-    kau  #(lsft 8)  ;;S-8
     kro  #(ralt ralt / x) ;;Cross
-    kzu  #(lsft 9)  ;;S-9
+
     l    #(ralt l l) ;;script small l ( spezial l)
     lv   #(ralt l v)  ;;vertical line
     mql  #(ralt < <)  ;;quot left
     mqr  #(ralt > >)  ;;quot right
     not  #(ralt min comm) ;;math NOT
-    oe   #(o +") ;;little oe
-    OE   #(O +") ;;big OE
+    oe   #(+" o) ;;little oe
+    OE   #(+" O) ;;big OE
     or   #(ralt bksl /)  ;;math OR ##TEST DOUBLED BACKSLASH
     par  #(ralt o s) ;;paragraph
     qdt  #(ralt comm comm)  ;;quot down
@@ -159,18 +158,18 @@ These are the default layers for my keyboard
     po   #(ralt + +)  ;;pound sign
     pou  #(ralt l min)  ;;british pound
     qut  #(ralt ` `)  ;;quot up
-    sau  #(ralt 7)  ;;RA-7
+
     sdq  #(ralt comm spc) ;; single down quotation mark
     sen  #(ralt / c)  ;;Cent
     spa  #(ralt 3 min)    ;;spade
     sqt  #(ralt ' 9)  ;;single up quotation mark turnaround 9
-    ss   #(ralt s s) ;;sharp s
-    sta  #(ralt * *)  ;; star
-    szu  #(ralt 0)  ;;RA-0
+    ss   #(s s) ;;sharp s tap macro release TEST
+    sta  #(ralt * *)  ;; star, a real one
+
     tho  #(ralt min min min) ;;em dash
     thu  #(ralt min min .)  ;;en dash
-    ue   #(u +") ;;little ue
-    UE   #(U +") ;;big UE
+    ue   #(+" u) ;;little ue
+    UE   #(+" U) ;;big UE
     uz   #(ralt rght o)  ;;clockwise circle
-    yen  #(ralt y min)  ;;Yen min replace the line minus
+    yen  #(ralt y min)  ;;Yen min replace the line mi
 )
