@@ -9,6 +9,13 @@
   ;; Set this to false to disable any command-execution in KMonad
   allow-cmd true
 )
+#|
+  In addition to hard-coded symbols, we also provide 'uncompleted' macros. Since
+  a compose-key sequence is literally just a series of keystrokes, we can omit
+  the last one, and enter the sequence for 'add an umlaut' and let the user then
+  press some letter to add this umlaut to. These are created using the `+"`
+  syntax.
+  |#
 
 #|---
 These are the default layers for my keyboard
@@ -30,7 +37,7 @@ These are the default layers for my keyboard
   lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
 )------ |#
 
-#|  versuch mal hier ein qwertz als defsrc zu machen
+#|  original keyboard version
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
@@ -38,7 +45,7 @@ These are the default layers for my keyboard
   caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
   lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
-)
+)    hier drunter ist ein qwertz test
 |#
 
 (defsrc
@@ -52,8 +59,8 @@ These are the default layers for my keyboard
 
 (deflayer level1
   _    _    _    _    _    _    _    _    _    _    _    _    _          ssrq slck pause
-  @lvq 1    2    3    4    5    6    7    8    9    0    min  grv    bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  k    .    o    comm @y   v    g    c    l    @ss  @z   apo    ret   del  end  pgdn  kp7  kp8  kp9  kp+
+  @lvq 1    2    3    4    5    6    7    8    9    0    min  grv  bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  k    .    o    comm @y   v    g    c    l    @ss  @z   apo  ret   del  end  pgdn  kp7  kp8  kp9  kp+
   @lv3 h    a    e    i    u    d    t    r    n    s    f    @lv3                       kp4  kp5  kp6
   lsft @lv4 x    q    @ae  @ue  @oe  b    p    w    m    j    @lv2            up         kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 @lv4 rmet @lvq rctl       left down rght  kp0  kp.
@@ -88,7 +95,7 @@ These are the default layers for my keyboard
 
 (deflayer qwertz
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
-  grv  1    2    3    4    5    6    7    8    9    0    @ss   eql bspc  ins  home pgup  nlck kp/  kp*  kp-
+  grv  1    2    3    4    5    6    7    8    9    0    @ss  eql  bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  q    w    e    r    t    y    u    i    o    p    @ue  +    ret   del  end  pgdn  kp7  kp8  kp9  kp+
   caps a    s    d    f    g    h    j    k    l    @oe  @ae  @po                        kp4  kp5  kp6
   lsft 102d @y   x    c    v    b    n    m    comm .    min  rsft            up         kp1  kp2  kp3  kprt
