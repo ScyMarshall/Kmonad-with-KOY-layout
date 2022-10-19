@@ -97,57 +97,64 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
 |#
 #| Hier nun test us internctional im windows |#
 (defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
-  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
-  lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
+
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]
+  caps a    s    d    f    g    h    j    k    l    ;    '     x    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    x          rsft
+  func lctl lmet lalt           spc            ralt sys  rctl  pgdn up   pgup
+                                                               left down rght
 )
 
 (deflayer level1
-  _    _    _    _    _    _    _    _    _    _    _    _    _          ssrq slck pause
-  S-6  1    2    3    4    5    6    7    8    9    0    -    @lvq bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  v    .    o    u    @ae  q    g    l    h    j    f    apo  ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  @lv3 c    a    e    i    y    b    t    r    n    s    @lv3 @ss                        kp4  kp5  kp6
-  @lv2 S-3  z    x    ,    @ue  @oe  p    d    w    m    k    @lv2            up         kp1  kp2  kp3  kprt
-  lctl lmet lalt           spc                 ralt rmet @lv4 rctl       left down rght  kp0  kp.
-) ;;comma is a test
+  _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
+    S-6  1    2    3    4    5    6    7    8    9    0    -     @lvq bspc
+    tab  v    .    o    u    @ae  q    g    l    h    j    f     apo
+    @lv3 c    a    e    i    y    b    t    r    n    s    @lv3  @ss  ret
+    @lv2 S-3  z    x    ,    @ue  @oe  p    d    w    m    k          @lv2
+    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
+                                                                 left down rght
+)
 
 (deflayer level2
-  _    _    _    _    _    _    _    _    _    _    _    _    _          ssrq slck pause
-  S-6  @deg @par @ll  @mqr @mql @dol @eur @qdt @qut @qit @tho grv  bspc  ins  home pgup  S-tab kp/ kp*  kp-
-  tab  V    @bob O    U    S-@ae Q   G    L    H    J    F    _    ret   del  end  pgdn  @hch @exx @sta kp+
-  @lv3 C    A    E    I    Y    B    T    R    N    S    @lv3 @ss                        @spa @eur @kro
-  @lv2 S-3  Z    X    –    S-@ue S-@oe P  D    W    M    K    @lv2            up         @not @or  @and kprt
-  lctl lmet lalt           spc                 ralt rmet @lv4 rctl       left down rght  kp0  kp.
+  _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
+    S-6  @deg @par @ll  @mqr @mql @dol @eur @qdt @qut @qit @tho  grv  bspc
+    tab  V    @bob O    U    S-@ae Q   G    L    H    J    F     _
+    @lv3 C    A    E    I    Y    B    T    R    N    S    @lv3  @ss  ret
+    @lv2 S-3  Z    X    –    S-@ue S-@oe P  D    W    M    K          @lv2
+    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
+                                                                 left down rght
 )
 
 (deflayer level3
- _    _    _    _    _    _    _    _    _    _    _    _    _          ssrq slck pause
- @uz  @1   @2   @3   @qmr @qml @cen @yen @sdq @saq apo  min  @deg bspc  ins  home pgup  S-tab kp/ kp*  kp-
- tab  @ddd @do  @lsb @rsb S-6  S-1  S-comm S-dot eql S-7 @ef @di  ret   del  end  pgdn  @hch @exx @sta kp+
- @lv3 bksl /    @lcb @rcb S-=  S-[  S-9  S-0  min  @col @lv3 @at                        @spa @eur @kro
- XX   S-3  S-4  @pip @til grv  S-eql S-5 S-2  '    @pip scln XX              up         @not @or  @and kprt
- lctl lmet lalt           spc                 ralt rmet @lv4 rctl       left down rght  kp0  kp.
+ _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
+   @uz  @1   @2   @3   @qmr @qml @cen @yen @sdq @saq apo  min   @deg bspc
+   tab  @ddd @do  @lsb @rsb S-6  S-1  S-comm S-dot eql S-7 @ef  @di
+   @lv3 bksl /    @lcb @rcb S-=  S-[  S-9  S-0  min  @col @lv3  @at  ret
+   XX   S-3  S-4  @pip @til grv  S-eql S-5 S-2  '    @pip scln       XX
+   func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
+                                                                left down rght
 )
 
 (deflayer level4
-  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
-  _    _    _    _    _    _    _    _    _    /    S-8  _    _    bspc  _    _    _     _    _    _    _
-  _    bspc up   del  _    _    _    _    kp7  kp8  kp9  _    _    ret   _    _    _     _    _    _    _
-  pgup left down rght pgdn _    _    _    kp4  kp5  kp6  _    _                          _    _    _
-  @lv2 XX   _    _    _    _    _    _    kp1  kp2  kp3  scln _               _          _    _    _    _
-  _    _    _              _                   _    _    _    _          _    _    _     _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
+    _    _    _    _    _    _    _    _    _    /    S-8  _     _    bspc
+    _    bspc up   del  _    _    _    _    kp7  kp8  kp9  _     _
+    pgup left down rght pgdn _    _    _    kp4  kp5  kp6  _     _    ret
+    @lv2 XX   _    _    _    _    _    _    kp1  kp2  kp3  scln       _
+    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
+                                                                 left down rght
 )
 
 (deflayer qwertz
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
-  S-6  1    2    3    4    5    6    7    8    9    0    @ss  eql  bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    z    u    i    o    p    @ue  S-eql ret  del  end  pgdn  kp7  kp8  kp9  kp+
-  caps a    s    d    f    g    h    j    k    l    @oe  @ae  S-3                        kp4  kp5  kp6
-  lsft 102d y    x    c    v    b    n    m    comm .    min  rsft            up         kp1  kp2  kp3  kprt
-  lctl lmet lalt           spc                 ralt rmet @lv1 rctl       left down rght  kp0  kp.
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+    S-6  1    2    3    4    5    6    7    8    9    0    @ss   eql  bspc
+    tab  q    w    e    r    t    z    u    i    o    p    @ue   S-eql
+    caps a    s    d    f    g    h    j    k    l    @oe  @ae   S-3  ret
+    lsft 102d y    x    c    v    b    n    m    comm .    min        rsft
+    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
+                                                                 left down rght
 )
 
 #|------------------------------------------------------------------------|#
@@ -181,18 +188,6 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
   tho #(ralt min min min) ;;em dash
   bob #(ralt c 1 .)  ;; middle dot
 
-;; numblock level two&three
-
-  hch #(ralt y y)  ;; heavy checkmark
-  exx #(ralt @ @ x)  ;; heavy ballot
-  sta #(ralt * *)  ;; star, a real one
-  spa #(ralt 3 min)    ;;spade
-  kro #(ralt ralt / x) ;;Cross
-  not #(ralt min comm) ;;math NOT
-  or  #(ralt bksl /)  ;;math OR ##TEST DOUBLED BACKSLASH
-  and #(ralt / bksl) ;;math AND##TEST DOUBLED BACKSLASH
-
-
 ;;on level three
   uz  #(ralt rght o)  ;;clockwise circle
   1   RA-S-1 ;;¹
@@ -220,123 +215,4 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
 
 
 
-#| Version eins
-;;on level one
-  ae #(a ') ;;little ä
-  ue #(u ;)  ;;ü
-  oe #(o grv) ;; ö
-  ss #(s [) ;;ß
-
-;;on level two
-  deg RA-S-; ;; °
-  par RA-S-s ;;§
-  ll  #(ralt l l) ;;script small l ( spezial l)
-  mqr #( RA-] ) ;; test // »
-  mql #( RA-[ ) ;; test // «
-  dol S-4 ;;$
-  eur RA-5 ;;€
-  qdt #( RA-S-{ );;„
-  qut #( RA-S-} ) ;;“
-  qit #( RA-S-' ) ;;”
-  tho #(ralt min min min) ;;em dash
-  bob #(ralt c 1 .)  ;; middle dot
-
-;; numblock level two&three
-
-  hch #(ralt y y)  ;; heavy checkmark
-  exx #(ralt @ @ x)  ;; heavy ballot
-  sta #(ralt * *)  ;; star, a real one
-  spa #(ralt 3 min)    ;;spade
-  kro #(ralt ralt / x) ;;Cross
-  not #(ralt min comm) ;;math NOT
-  or  #(ralt bksl /)  ;;math OR ##TEST DOUBLED BACKSLASH
-  and #(ralt / bksl) ;;math AND##TEST DOUBLED BACKSLASH
-
-
-;;on level three
-  uz  #(ralt rght o)  ;;clockwise circle
-  1   RA-S-1 ;;¹
-  2   RA-2  ;;²
-  3   RA-3  ;;³
-  qmr #(ralt . >)  ;;quotation mark ›
-  qml #(ralt . <)  ;;quotation mark ‹
-  cen RA-S-C  ;;¢
-  yen RA-min ;;¥
-  sdq RA-9  ;;‚
-  saq RA-0  ;; ’
-  ddd #(ralt 2 .) ;;circle arrow
-  do  S--  ;;_
-  ef  #(ralt f ,) ;;latin f
-  di  #(ralt d i)  ;; diameter
-  col S-; ;; :
-  at  A-C-q  ;; @
-  pip A-C-102d  ;;|
-  til A-C-= ;; ~
-  btk #( S-] spc )	;; `
-  lsb A-C-8  ;;[
-  rsb A-C-9 ;; ]
-  lcb A-C-7 ;;{
-  rcb A-C-0  ;;}
-  tck #( ] spc) ;;'
-
-|#
-
-
-
-
-
-#|
-    ;; Wincompose Codes aliases
-    1    #(ralt ^ 1) ;;super 1
-    2    #(ralt ^ 2) ;;super 2
-    3    #(ralt ^ 3) ;;super 3
-    ae   #(ralt " a) ;;little ae
-    AE   #(ralt " A) ;;big AE
-    and  #(ralt / bksl) ;;math AND##TEST DOUBLED BACKSLASH
-    at   #(ralt q)  ;;RA-q
-    bob  #(ralt c 1 .)  ;; middle dot)
-    eur  #(ralt e =)
-    ef  #(ralt f ,)
-    di  #(ralt d i)
-    ddd #(ralt 2 .)
-    col  #(S-;)
-    deg  #(ralt 0 *) ;;degree sign
-    exx  #(ralt @ @ x)  ;; heavy ballot
-    guz  #(ralt left o)  ;;counterclockwise circle
-    hch  #(ralt y y)  ;; heavy checkmark
-    kro  #(ralt ralt / x) ;;Cross
-
-    l    #(ralt l l) ;;script small l ( spezial l)
-    lv   #(ralt l v)  ;;vertical line
-    mql  #(ralt < <)  ;;quot left
-    mqr  #(ralt > >)  ;;quot right
-    not  #(ralt min comm) ;;math NOT
-    do #(ralt - - .)
-    oe   #(ralt " o) ;;little oe
-    OE   #(ralt " O) ;;big OE
-    or   #(ralt bksl /)  ;;math OR ##TEST DOUBLED BACKSLASH
-    par  #(ralt o s) ;;paragraph
-    qdt  #(ralt comm comm)  ;;quot down
-    qit  #(ralt ' ')  ;;quot up turnaround 9
-    qmr  #(ralt . >)  ;;quotation mark
-    qml  #(ralt . <)  ;;quotation mark
-    po   #(ralt + +)  ;;pound sign
-    pou  #(ralt l min)  ;;british pound
-    qut  #(ralt ` `)  ;;quot up
-
-    sdq  #(ralt comm spc) ;; single down quotation mark
-    sen  #(ralt / c)  ;;Cent
-    spa  #(ralt 3 min)    ;;spade
-    sqt  #(ralt ' 9)  ;;single up quotation mark turnaround 9
-    ss   #(s s) ;;sharp s tap macro release TEST
-    sta  #(ralt * *)  ;; star, a real one
-
-    tho  #(ralt min min min) ;;em dash
-    thu  #(ralt min min .)  ;;en dash
-    ue   #(ralt " u) ;;little ue
-    UE   #(ralt " U) ;;big UE
-    uz   #(ralt rght o)  ;;clockwise circle
-    yen  #(ralt y min)  ;;Yen min replace the line mi
-)
- |#
 )
