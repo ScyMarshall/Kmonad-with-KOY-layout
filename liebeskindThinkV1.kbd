@@ -6,62 +6,7 @@
   fallthrough true
   allow-cmd true
 )
-#|
-when using a german keymap in windows make this mappings in defsrc
- 	; as  grv
-	ß as  [
-	tick  ]
-    ü as ;
-	+  as =
-	^  as \
-	ä  as '
-    #  as /
-	-  as -
-to be able to remap them later
 
-use -l debug to track the keys
-Received event: Release <`>
-Running hooks
-Emitting: Release <bks>
-
-These are the default layers for my keyboard
-(deflayer name
-  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _     _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _                         _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _               _         _    _    _    _
-  _    _    _              _                   _    _    _    _          _    _    _    _    _
-)
-
-(defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
-  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
-  lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
-)
-#| ---------------------------------------------------------------------------------------------------------
-hier drunter ist gehards Idee
-(defsrc
-  esc       F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12        ssrq slck pause
-  \         1    2    3    4    5    6    7    8    9    0    [    ]    bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab       q    w    e    r    t    z    u    i    o    p    ;    =    ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  caps      a    s    d    f    g    h    j    k    l    grv  '    /                          kp4  kp5  kp6
-  lsft 102d y    x    c    v    b    n    m    ,    .    -    rsft                 up         kp1  kp2  kp3  kprt
-  lctl      lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
-)
------------------------------------------------------------------------------------------------------------|#
-#|  original keyboard version
-(defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
-  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft            up         kp1  kp2  kp3  kprt
-  lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
-)
 #| --------------------------------------------------------------------------
 
                          KMonad: ISO ThinkPad T430 Template
@@ -85,95 +30,84 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   --------------------------------------------------------------------------
 
 (defsrc
-       mute vold volu
-esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [     ]
-  caps a    s    d    f    g    h    j    k    l    ;    '     x    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    x          rsft
-  func lctl lmet lalt           spc            ralt sys  rctl  pgdn up   pgup
+  caps a    s    d    f    g    h    j    k    l    ;    '     \    ret
+  lsft  102d    z    x    c    v    b    n    m    ,    .    /      rsft
+  XX  lctl lmet lalt           spc            ralt print  rctl  pgdn up   pgup
                                                                left down rght
 )
 |#
-#| Hier nun test us internctional im windows |#
+#| Hier nun test us international im windows |#
 (defsrc
-
-esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [     ]
-  caps a    s    d    f    g    h    j    k    l    ;    '     x    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    x          rsft
-  func lctl lmet lalt           spc            ralt sys  rctl  pgdn up   pgup
+  caps a    s    d    f    g    h    j    k    l    ;    '     \    ret
+  lsft 102d z    x    c    v    b    n    m    ,    .    /          rsft
+  esc  lctl lmet lalt           spc            ralt print rctl  pgup up   pgdn
                                                                left down rght
 )
-
 (deflayer level1
   _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
-    S-6  1    2    3    4    5    6    7    8    9    0    -     @lvq bspc
-    tab  v    .    o    u    @ae  q    g    l    h    j    f     apo
-    @lv3 c    a    e    i    y    b    t    r    n    s    @lv3  @ss  ret
-    @lv2 S-3  z    x    ,    @ue  @oe  p    d    w    m    k          @lv2
-    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
-                                                                 left down rght
+  S-6  1    2    3    4    5    6    7    8    9    0    -     @lvq bspc
+  tab  v    .    o    u    @ae  q    g    l    h    j    f     apo
+  @lv3 c    a    e    i    y    b    t    r    n    s    @lv3  @ss  ret
+  lsft S-3  z    x    ,    @ue  @oe  p    d    w    m    k          @lv2
+  _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
+                                                               left down rght
 )
-
 (deflayer level2
   _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
-    S-6  @deg @par @ll  @mqr @mql @dol @eur @qdt @qut @qit @tho  grv  bspc
-    tab  V    @bob O    U    S-@ae Q   G    L    H    J    F     _
-    @lv3 C    A    E    I    Y    B    T    R    N    S    @lv3  @ss  ret
-    @lv2 S-3  Z    X    –    S-@ue S-@oe P  D    W    M    K          @lv2
-    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
-                                                                 left down rght
+  S-6  @deg @par @ll  @mqr @mql @dol @eur @qdt @qut @qit @tho  grv  bspc
+  tab  V    @bob O    U    S-@ae Q   G    L    H    J    F     _
+  @lv3 C    A    E    I    Y    B    T    R    N    S    @lv3  @ss  ret
+  lsft S-3  Z    X    –    S-@ue S-@oe P  D    W    M    K          @lv2
+  _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
+                                                               left down rght
 )
-
 (deflayer level3
  _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
-   @uz  @1   @2   @3   @qmr @qml @cen @yen @sdq @saq apo  min   @deg bspc
-   tab  @ddd @do  @lsb @rsb S-6  S-1  S-comm S-dot eql S-7 @ef  @di
-   @lv3 bksl /    @lcb @rcb S-=  S-[  S-9  S-0  min  @col @lv3  @at  ret
-   XX   S-3  S-4  @pip @til grv  S-eql S-5 S-2  '    @pip scln       XX
-   func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
-                                                                left down rght
+ @uz  @1   @2   @3   @qmr @qml @cen @yen @sdq @saq apo  min   @deg bspc
+ tab  @ddd @do  @lsb @rsb S-6  S-1  S-comm S-dot eql S-7 @ef  @di
+ @lv3 bksl /    @lcb @rcb S-=  S-[  S-9  S-0  min  @col XX    @at  ret
+ XX   S-3  S-4  @pip @til grv  S-eql S-5 S-2  '    @pip scln       XX
+ _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
+                                                              left down rght
 )
-
 (deflayer level4
   _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
-    _    _    _    _    _    _    _    _    _    /    S-8  _     _    bspc
-    _    bspc up   del  _    _    _    _    kp7  kp8  kp9  _     _
-    pgup left down rght pgdn _    _    _    kp4  kp5  kp6  _     _    ret
-    @lv2 XX   _    _    _    _    _    _    kp1  kp2  kp3  scln       _
-    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
-                                                                 left down rght
+  _    _    _    _    _    _    _    _    _    /    S-8  _     _    bspc
+  _    bspc up   del  _    _    _    _    kp7  kp8  kp9  _     _
+  pgup left down rght pgdn _    _    _    kp4  kp5  kp6  _     _    ret
+  XX   XX   _    _    _    _    _    _    kp1  kp2  kp3  scln       _
+  _    lctl lmet lalt           spc            rmet XX    rctl  pgup up   pgdn
+                                                               left down rght
 )
-
 (deflayer qwertz
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
-    S-6  1    2    3    4    5    6    7    8    9    0    @ss   eql  bspc
-    tab  q    w    e    r    t    z    u    i    o    p    @ue   S-eql
-    caps a    s    d    f    g    h    j    k    l    @oe  @ae   S-3  ret
-    lsft 102d y    x    c    v    b    n    m    comm .    min        rsft
-    func lctl lmet lalt           spc            rmet @lv4 rctl  pgdn up   pgup
-                                                                 left down rght
+  S-6  1    2    3    4    5    6    7    8    9    0    @ss   @lv1 bspc
+  tab  q    w    e    r    t    z    u    i    o    p    @ue   S-eql
+  caps a    s    d    f    g    h    j    k    l    @oe  @ae   S-3  ret
+  lsft 102d y    x    c    v    b    n    m    comm .    min        rsft
+  _    lctl lmet lalt           spc            rmet @lv4  rctl  pgup up   pgdn
+                                                               left down rght
 )
-
 #|------------------------------------------------------------------------|#
 #| welcome to the alias zone!                                             |#
 #|------------------------------------------------------------------------|#
-
 (defalias
   lvq (layer-switch qwertz) ;; Set qwertz as the base layer
   lv1 (layer-switch level1) ;; Set koy level1 as the base layer
   lv2 (layer-toggle level2)
   lv3 (layer-toggle level3)
   lv4 (layer-toggle level4)
-
 ;;on level one
   ae RA-q ;;little ä
   ue RA-y  ;;ü
   oe RA-p ;; ö
   ss RA-s ;;ß
-
 ;;on level two
   deg RA-S-; ;; °
   par RA-S-s ;;§
@@ -211,8 +145,4 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
   rsb #( ] ) ;; ]
   lcb #( S-[ ) ;;{
   rcb #( S-] ) ;;}
-
-
-
-
 )
