@@ -54,7 +54,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   S-6  1    2    3    4    5    6    7    8    9    0    -     @lvq bspc
   tab  v    .    o    u    @ae  q    g    l    h    f    j     apo
   @lv3 c    a    e    i    y    b    t    r    n    s    @lv3  @ss  ret
-  lsft S-3  z    x    ,    @ue  @oe  p    d    w    m    k          @lv2
+  lsft S-3  z    x    ,    @oe  @ue  p    d    w    m    k          @lv2
   _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
                                                                left down rght
 )
@@ -63,21 +63,21 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   S-6  @deg @par @ll  @mqr @mql @dol @eur @qdt @qut @qit @tho  grv  bspc
   tab  V    @bob O    U    S-@ae Q   G    L    H    F    J     _
   @lv3 C    A    E    I    Y    B    T    R    N    S    @lv3  @ss  ret
-  lsft S-3  Z    X    –    S-@ue S-@oe P  D    W    M    K          @lv2
+  lsft S-3  Z    X    –    S-@oe S-@ue P  D    W    M    K          @lv2
   _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
                                                                left down rght
 )
 (deflayer level3
- _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
- @uz  @1   @2   @3   @qmr @qml @cen @yen @sdq @saq apo  min   @deg bspc
- tab  @ddd @do  @lsb @rsb S-6  S-1  S-comm S-dot eql S-7 @ef  @di
- @lv3 bksl /    @lcb @rcb S-=  S-[  @col scln min  @col XX    S-2  ret
- XX   S-3  S-4  S-9  S-0  grv  S-eql S-5 S-2  '    @pip scln       XX
+ _    _    _    _    _    _    _     _      _     _    _    _     _    home end  ins  del
+ @uz  @1   @2   @3   @qmr @qml @cen  @yen   @sdq  @saq apo  min   @deg bspc
+ tab  @ddd @do  @lcb @rcb S-2  S-1   S-comm S-dot eql  S-7  @ef   @di
+ @lv3 bksl /    S-9  S-0  S-=  S-[   @col   scln  min  @col XX    S-2  ret
+ XX   S-3  S-4  @lsb @rsb grv  S-eql S-5    S-2   '    @pip scln       XX
  _    lctl lmet lalt           spc            ralt @lv4  rctl  pgup up   pgdn
                                                               left down rght
 )
 (deflayer level4
-  _    _    _    _    _    _    _    _    _    _    _    _    _    home end  ins  del
+  _    _    _    _    _    _    _    _    _    _    _    _     _    home end  ins  del
   _    _    _    _    _    _    _    _    _    /    S-8  _     _    bspc
   _    bspc up   del  _    _    _    _    kp7  kp8  kp9  _     _
   pgup left down rght pgdn _    _    _    kp4  kp5  kp6  _     _    ret
